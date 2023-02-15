@@ -9,6 +9,8 @@
     --color5: #404BBF;
     --color6: #E7E9FC;
     --flex-elements:#8E8F99;
+    --modal-element:#fcfcfc;
+    --transition-dur-and-func:250ms;
 }
 
 /* ============= Додаткові параметри скидання стилів ============= */
@@ -302,6 +304,79 @@ margin-right: 24px;
 
 /* Анімація тексту */
 
+
+
+
+/* Модальне вікно */
+
+.backdrop {
+    position: fixed;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.4);
+
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+
+    width: 408px;
+    height: 576px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--modal-element);
+}
+
+.modal-close-bth {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background-color: var(--color6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.modal-close-bth-icon {
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close-bth:hover ,
+.modal-close-bth:focus {
+    border-color: var(--color1);
+}
+
+.modal-close-bth:hover .modal-close-bth-icon
+.modal-close-bth:focus  .modal-close-bth-icon {
+fill: var(--color1);
+}
+
+/* Модальне вікно*/
 
 
 .flex-h3 {
