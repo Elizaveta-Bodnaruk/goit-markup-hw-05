@@ -10,7 +10,8 @@
     --color6: #E7E9FC;
     --flex-elements:#8E8F99;
     --modal-element:#fcfcfc;
-    --transition-dur-and-func:250ms;
+    --transition-dur-and-func:250ms ;
+    --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============= Додаткові параметри скидання стилів ============= */
@@ -460,6 +461,31 @@ color: var(--brand-color);
 
 .contacts {
     color: var(--brand-color);
+
+    position: relative;
+}
+
+.contacts::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--color1);
+    border-radius: 2px;
+
+    display: none;
+    opacity: 0;
+}
+
+.contacts:hover::after {
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 
 .contacts:hover {
