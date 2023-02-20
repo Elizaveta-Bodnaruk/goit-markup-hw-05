@@ -291,6 +291,7 @@ margin-right: 24px;
 
     color: rgba(244, 244, 253, 1);
     background-color: rgba(77, 90, 229, 1);
+    transition: background-color, color;
 }
 
 .team-list-overlay {
@@ -301,6 +302,7 @@ margin-right: 24px;
 .menu:hover .overlay,
 .menu:focus .overlay {
     transform: translate(0, 0);
+    color: rgba(244, 244, 253, 1);
 }
 
 /* Анімація тексту */
@@ -364,7 +366,7 @@ margin-right: 24px;
 }
 
 .modal-close-bth-icon {
-    transition: fill var(--transition-dur-and-func);
+    transition: fill var(--transition-dur-and-func), border-color var(--color1);
 }
 
 .modal-close-bth:hover ,
@@ -393,6 +395,7 @@ fill: var(--color1);
 
 .menu {
     display: block;
+    transition: box-shadow; 
 }
 
 .menu:hover ,
@@ -463,6 +466,8 @@ color: var(--brand-color);
     color: var(--brand-color);
 
     position: relative;
+    transition: background-color var(--color1);
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
 }
 
 .contacts::after {
@@ -485,7 +490,7 @@ color: var(--brand-color);
 
 .contacts:hover::after {
     opacity: 1;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms var(--timing-function), ;
 }
 
 .contacts:hover {
@@ -583,6 +588,7 @@ color: var(--brand-color);
 
     border-radius: 50%;
     background-color: var(--color1);
+    transition: background-color;
 }
 
 .icon-flex-link:hover ,
@@ -618,7 +624,9 @@ color: var(--brand-color);
     height: 100%;
 
     border-radius: 50%;
-    background-color: var(--color1);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
 }
 
 .footer-icon-link:hover ,
@@ -655,6 +663,7 @@ color: var(--brand-color);
     left: 8px;
 
     fill: currentColor;
+    
 }
 
 .clients {
@@ -694,6 +703,8 @@ color: var(--brand-color);
     border: 1px solid var(--flex-elements);
     border-radius: 4px;
     fill: #8e8f99 ;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+    transition-property: border-color var(--color1), fill var(--color1);
 }
 
 .clients-link:hover ,
@@ -723,6 +734,9 @@ color: var(--brand-color);
 
     color: var(--color4);
     background-color: var(--color1);
+    transition-property: background-color var(--color5);
+    transition-property: box-shadow;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
  }
@@ -793,13 +807,10 @@ color: var(--brand-color);
 }
 
 .text p {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02;
 
-    color: var(--color2);
+    color: var(--brand-color);
 }
 
 .text-img h2 {
@@ -898,6 +909,8 @@ color: var(--brand-color);
     color: var(--color1);
     border: 1px solid var(--color6);
     background-color: var(--color3);
+
+    transition-property: background-color var(--color3), color var(--color1), border;
 }
 
 .pointer:hover ,
