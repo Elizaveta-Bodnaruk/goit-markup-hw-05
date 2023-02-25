@@ -52,6 +52,17 @@ body {
 
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .section {
     padding-right: 156px;
     padding-left: 156px;
@@ -338,6 +349,7 @@ margin-right: 24px;
 
     width: 408px;
     height: 576px;
+    padding: 24px;
 
     top: 50%;
     left: 50%;
@@ -380,6 +392,177 @@ fill: var(--color1);
 }
 
 /* Модальне вікно*/
+
+
+
+/* Contacts form для модульного вікна */
+    
+.js-speaker-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    margin-top: 72px;
+}
+
+.contacts-form-label {
+    padding: 8px 16px;
+}
+
+.modal-form-input-desc {
+    display: block;
+    font-size: 12px;
+    line-height: 1.1;
+    font-weight: 400;
+
+    margin-bottom: 4px;
+
+    color: var(--flex-elements);
+}
+
+.contacts-form-input-wrapper {
+    display: block;
+    position: relative;
+}
+
+.contacts-form-input {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    color: #000000;
+    outline: none;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+ 
+.contacts-form-input:focus {
+    border-color: var(--color1);
+}
+
+.contacts-form-input:focus + .modal-form-input {
+    fill: var(--color1);
+}
+
+.contacts-form-input-icon {
+    display: block;
+    position: absolute;
+
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+
+    width: 18px;
+    height: 24px;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-form-massage {
+    resize: none;
+
+    width: 100%;
+    height: 120px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.contacts-form-massage::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.contacts-form-message:focus {
+    border-color: var(--color1);
+    outline: none;
+}
+
+.contacts-form-button {
+    margin-bottom: 24px;
+
+    align-self: center;
+    flex-direction: row;
+    padding: 16px 32px;
+    border: none;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+
+    display: flex;
+    justify-content: center;
+
+    color: var(--color4);
+    background-color: var(--color1);
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.contacts-form-button:hover,
+.contacts-form-button:focus {
+    background-color: var(--color5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+ .contacts-checkbox-text-label::before {
+    content: "";
+
+    display: block;
+    width: 18px;
+     height: 16px;
+
+    margin-right: 8px;
+
+    color: #757575;
+    border: 1.25px solid var(--brand-color);
+     border-radius: 2px;
+    cursor: pointer;
+    }
+
+     .contacts-checkbox-text-label {
+     display: flex;
+     font-size: 12px;
+     align-items: center;
+
+     margin-bottom: 24px;
+     }
+
+    .contacts-form-checkbox:checked + .contacts-checkbox-text-label::before {
+     background-image: url(//images4/click.svg);
+     background-color: var(--color1);
+    }
+
+    .contacts-form-checkbox:focus+.contacts-checkbox-text-label::before {
+     outline: 1.25px solid var(--brand-color);
+     border-radius: 2px;
+        }
+
+
+/* Contacts form для модульного вікна */
 
 
 .flex-h3 {
