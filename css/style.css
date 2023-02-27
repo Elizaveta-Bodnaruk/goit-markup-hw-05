@@ -70,7 +70,7 @@ body {
 
 /* ============= Позіціонування контенту index.html============= */
 
-.header-container {
+/*.header-container {
     display: flex;
     align-items: center;
 
@@ -136,7 +136,7 @@ body {
 .secondary-link .item + .item {
 margin-left: 40px;
 }
-
+*/
 .text-title .title {
     margin-bottom: 8px;
 
@@ -349,7 +349,7 @@ margin-right: 24px;
 
     width: 408px;
     height: 576px;
-    padding: 24px;
+    padding: 72px 24px 24px;
 
     top: 50%;
     left: 50%;
@@ -408,7 +408,6 @@ fill: var(--color1);
     align-items: center;
 
     font-weight: 700;
-    margin-top: 72px;
 }
 
 .contacts-form-label {
@@ -469,7 +468,7 @@ fill: var(--color1);
 
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
 .contacts-form-massage {
@@ -549,6 +548,7 @@ fill: var(--color1);
      align-items: center;
 
      margin-bottom: 24px;
+     margin-top: 16px;
      }
 
     .contacts-form-checkbox:checked + .contacts-checkbox-text-label::before {
@@ -583,7 +583,6 @@ fill: var(--color1);
 }
 
 .subscribe-form-label {
-    margin-bottom: 16px;
     color: var(--color4);
 }
 
@@ -592,6 +591,7 @@ fill: var(--color1);
     height: 40px;
     padding-left: 16px;
 
+    color: var(--color4);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -725,7 +725,7 @@ color: var(--brand-color);
 /* ============= Hover and focus ============= */
 
 .contacts {
-    color: var(--brand-color);
+    color: var(--color1);
 
     position: relative;
     transition: background-color;
@@ -742,13 +742,14 @@ color: var(--brand-color);
     height: 4px;
 
     left: 0;
-    bottom: 0;
+    bottom: -4px;
 
     background-color: var(--color1);
+    border-radius: 4px;
     opacity: 0;
 }
 
-.contacts::after {
+.contacts.current::after {
     display: block;
 
     opacity: 1;
